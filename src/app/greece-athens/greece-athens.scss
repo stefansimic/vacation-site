@@ -26,15 +26,89 @@ h1 {
     padding-right:  var(--large-margin-sides);
 
     @media (max-width: 1250px) {
-        padding-left:   var(--base-margin-sides);
-        padding-right:  var(--base-margin-sides);
+        padding-left:   var(--small-margin-sides);
+        padding-right:  var(--small-margin-sides);
+    }
+}
+
+.image-grid {
+  column-count: 3;
+  column-gap: 6%;
+
+   @media (max-width: 1250px) {
+        column-count: 2;
+    }
+}
+
+.item {
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
+    page-break-inside: avoid;
+
+    margin-bottom: var(--base-padding);
+}
+
+img {
+    max-width: 240px;
+
+    @media (max-width: 1250px) {
+        max-width: 100%;
+    }
+}
+
+img:hover {
+    cursor: pointer;
+
+    filter: grayscale(30%);
+}
+
+.temple-frame {
+  position: relative;
+  display: inline-block;
+}
+
+.temple-frame img {
+    display: block;
+    max-width: 95%;
+    height: auto;
+    margin: auto
+}
+
+.temple-frame::before,
+.temple-frame::after {
+    content: "";
+    position: absolute;
+    top: 5%;
+    height: 90%;
+
+    width: 6px;
+    background:
+    linear-gradient(var(--greek-white), var(--greek-white)) left,
+    linear-gradient(var(--greek-white), var(--greek-white)) right;
+    background-size: 2px 100%, 2px 100%;
+    background-repeat: no-repeat;
+}
+
+.temple-frame::before {
+    left: -12px;
+
+    @media (max-width: 1250px) {
+        left: -6px
+    }
+}
+
+.temple-frame::after {
+    right: -12px;
+    
+    @media (max-width: 1250px) {
+        right: -6px
     }
 }
 
 .minimalist-hr {
   position: relative;
   border: none;
-  height: 12px;
+  height: 10px;
   margin: 2rem 0;
 }
 
