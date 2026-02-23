@@ -3,6 +3,68 @@
   src: url('/fonts/ancient-geek/geek.ttf')
 }
 
-p {
-  font-family: greekfont; /* use font */
+h1 {
+    margin-top: 0;
+    padding-top: var(--base-padding);
+}
+
+.greekified {
+    font-family: greekfont;
+}
+
+.vacation-container {
+    background-color: var(--greek-blue);
+    color: var(--greek-white);
+}
+
+.title-container {
+    text-align: center;
+}
+
+.content {
+    padding-left:   var(--large-margin-sides);
+    padding-right:  var(--large-margin-sides);
+
+    @media (max-width: 1250px) {
+        padding-left:   var(--base-margin-sides);
+        padding-right:  var(--base-margin-sides);
+    }
+}
+
+.minimalist-hr {
+  position: relative;
+  border: none;
+  height: 12px;
+  margin: 2rem 0;
+}
+
+.minimalist-hr::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  height: 2px;
+  background: var(--greek-white);
+  transform: translateY(-50%);
+}
+
+.minimalist-hr::after {
+  content: "";
+  position: absolute;
+  left: 5%;
+  width: 90%;
+  top: 50%;
+  height: 8px;
+
+  display: block;
+
+  background: repeating-linear-gradient(
+    to right,
+    var(--greek-white) 0px,
+    var(--greek-white) 8px,
+    transparent 8px,
+    transparent 16px
+  );
+
+  transform: translateY(-50%);
 }

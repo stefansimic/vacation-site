@@ -2,11 +2,28 @@
 
 :root {
     --min-container-height: 100vh;
-    --min-margin-sides: 5%;
+
+    /* margins */
+    --base-padding: 1em;
+    --base-margin-sides: 12%;
+    --large-margin-sides: 24%;
+
+
+    /* colors */
+
+    /** Greek flag colors*/
+    --greek-blue: #0D5EAF;
+    --greek-white: #ffffff;
+
+
+    /* Break Mobile Specifications */
+    --width-breakpoint: 1250px:
+}
+
+body {
+    margin: 0;
 }
 
 .vacation-container {
     min-height: var(--min-container-height);
-    margin-left: var(--min-margin-sides);
-    margin-right: var(--min-margin-sides);
 }
