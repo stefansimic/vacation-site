@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    --min-container-height: 100vh;
+    --min-margin-sides: 5%;
+}
+
+.vacation-container {
+    min-height: var(--min-container-height);
+    margin-left: var(--min-margin-sides);
+    margin-right: var(--min-margin-sides);
+}
